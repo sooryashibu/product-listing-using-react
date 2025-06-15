@@ -5,7 +5,7 @@ import CategoryFilter from "./components/CategoryFilter";
 import SortOptions from "./components/SortOptions";
 import ProductList from "./components/ProductList";
 import Footer from "./components/Footer";  // <-- Import Footer
-import { products as productsData } from "./data/products";
+import { products as productsData } from "./Data/products";
 import "./App.css";
 
 export default function App() {
