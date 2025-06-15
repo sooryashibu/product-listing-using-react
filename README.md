@@ -38,6 +38,7 @@ product-list/
 │ │ ├── ProductList.jsx
 │ │ ├── SearchBar.jsx
 │ │ ├── CategoryFilter.jsx
+│ │ ├── Footer.jsx
 │ │ ├── SortOptions.jsx
 │ ├── data/
 │ │ └── products.js

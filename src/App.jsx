@@ -4,6 +4,7 @@ import SearchBar from "./components/SearchBar";
 import CategoryFilter from "./components/CategoryFilter";
 import SortOptions from "./components/SortOptions";
 import ProductList from "./components/ProductList";
+import Footer from "./components/Footer";  // <-- Import Footer
 import { products as productsData } from "./data/products";
 import "./App.css";
 
@@ -22,19 +23,16 @@ export default function App() {
   const filteredProducts = useMemo(() => {
     let arr = productsData;
 
-    // search filter
     if (search.trim()) {
       arr = arr.filter((p) =>
         p.name.toLowerCase().includes(search.toLowerCase())
       );
     }
 
-    // category filter
     if (category !== "All") {
       arr = arr.filter((p) => p.category === category);
     }
 
-    // sort
     if (sortOption === "price-asc") {
       arr = arr.slice().sort((a, b) => a.price - b.price);
     } else if (sortOption === "price-desc") {
@@ -49,9 +47,9 @@ export default function App() {
   }, [search, category, sortOption]);
 
   return (
-    <>
+    <div className="app-container" style={{ display: "flex", flexDirection: "column", minHeight: "100vh" }}>
       <Header />
-      <main className="container my-4">
+      <main className="container my-4" style={{ flex: 1 }}>
         <div className="row mb-3 align-items-center">
           <div className="col-md-4 mb-2">
             <SearchBar search={search} setSearch={setSearch} />
@@ -70,6 +68,8 @@ export default function App() {
 
         <ProductList products={filteredProducts} />
       </main>
-    </>
+
+      <Footer />
+    </div>
   );
 }

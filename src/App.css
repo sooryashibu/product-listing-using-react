@@ -82,3 +82,13 @@ body {
   border-color: #388e3c;
   box-shadow: 0 0 0 0.2rem rgba(56, 142, 60, 0.25);
 }
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
