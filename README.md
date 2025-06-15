@@ -102,4 +102,4 @@ Mock product data is available in src/data/products.js:
 **soorya shibu**  
 Email: brijithlooka@gmail.com  
 GitHub: [https://github.com/sooryashibu](https://github.com/sooryashibu)  
-Live Demo: [https://sooryashibu.github.io/signup-form-validation/](https://sooryashibu.github.io/signup-form-validation/)
+Live Demo: https://product-listing-using-react-ktby.vercel.app/
